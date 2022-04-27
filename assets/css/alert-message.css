@@ -1,0 +1,39 @@
+.alert-message {
+  width: 500px;
+  user-select: none;
+  animation: dropBox 2s ease;
+  z-index: 9999999;
+}
+
+.alert-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.507);
+  z-index: 999999;
+  cursor: pointer;
+}
+
+.alert-show {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  display: none;
+}
+.alert-show.show {
+  display: flex;
+}
+
+@keyframes dropBox {
+  from {
+    transform: translateY(-500%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

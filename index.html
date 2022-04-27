@@ -14,9 +14,21 @@
     <link rel="stylesheet" href="assets/css/content.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/vendor/animate/animate.css" />
+    <link rel="stylesheet" href="assets/css/alert-message.css">
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- ------------------ Hello Alert ----------------- -->
+    <!-- <div class="alert-show">
+        <div class="alert-message">
+          <div class="card">
+            <div class="card-header">Title</div>
+            <div class="card-body">Hello</div>
+          </div>
+        </div>
+        <div class="alert-backdrop"></div>
+    </div> -->
+    
     <!-- ------------------ Header ----------------- -->
     <header class="container-fluid header-position">
       <div class="row">
@@ -392,6 +404,28 @@
         </div>
       </div>
     </footer>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="bar" tabindex="-1" aria-labelledby="barLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="barLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap4.6/js/bootstrap.bundle.js"></script>
