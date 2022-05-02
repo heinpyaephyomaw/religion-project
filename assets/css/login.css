@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600&display=swap');
+/* font-family: 'Dosis', sans-serif; */
+
+.login-background {
+    background: url('background-images/banner-img1.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+.login-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.459);
+}
+.login-center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-header {
+    font-size: 23px;
+    font-weight: 500;
+    color: rgba(0,0,0,.8705882352941177);
+    font-family: 'Dosis', sans-serif; 
+}
+.form-control-custom {
+    height: 45px;
+    padding: 0 15px;
+    border: 2px solid #efefef;
+    width: 300px;
+    margin: 6px 0;
+    background: #f5f5f5;
+    font-size: 14px;
+    border-radius: 0;
+}
+.form-control-custom:focus {
+    border: 2px solid;
+    border-color: #ddd #ddd #9B2C0E;
+    box-shadow: none;
+}
+.btn-submit {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 10px 0;
+    color: #fff;
+    background-color: #9B2C0E;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+.form-control-custom.password {
+    padding-right: 35px;
+}
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translate(0,-50%);
+    cursor: pointer;
+}
+.register-point {
+    color: #999;
+    font-size: 14px;
+}
+.register-point a {
+    color: #000;
+}
+.forgetpass a {
+    color: #000;
+    font-size: 14px;
+}
+
+/*--------------------------- checkbox--------------------------- */
+.cbx {
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098A9;
+    transition: all 0.2s ease;
+}
+
+.cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+
+.cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #9B2C0E;
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.cbx span:last-child {
+    padding-left: 8px;
+}
+
+.cbx:hover span:first-child {
+    border-color: #9B2C0E;
+}
+
+.inp-cbx:checked+.cbx span:first-child {
+    background: #9B2C0E;
+    border-color: #9B2C0E;
+    animation: wave 0.4s ease;
+}
+
+.inp-cbx:checked+.cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.inp-cbx:checked+.cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+@keyframes wave {
+    50% {
+        transform: scale(0.9);
+    }
+}

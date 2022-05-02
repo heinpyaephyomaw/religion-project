@@ -26,7 +26,7 @@ $(".acnav__label").click(function () {
 // --------------------------------
 let navCollapse = document.querySelector(".navbar-collapse");
 let navItem = document.querySelectorAll(".nav-item");
-document.querySelector(".navbar-toggler").addEventListener("click", () => {
+const navBarToggler = () => {
   let hasClass = navCollapse.classList.contains("show");
   if (hasClass) {
     navItem.forEach((item) => {
@@ -37,12 +37,28 @@ document.querySelector(".navbar-toggler").addEventListener("click", () => {
       item.classList.add("animate__fadeInDown");
     });
   }
-});
+};
 
 // --------------------------- welcome alert message ----------------------
-window.addEventListener('load', () => {
-    if(!sessionStorage.getItem('show')){
-        $("#bar").modal('show');
-        sessionStorage.setItem('show', true);
-    }
+window.addEventListener("load", () => {
+  if (!sessionStorage.getItem("show")) {
+    $("#bar").modal("show");
+    sessionStorage.setItem("show", true);
+  }
 });
+
+// ------------------------------- Password Show Hide ---------------------------
+
+const showPass = (e) => {
+  let input = e.parentElement.children[0];
+  let eye = e.parentElement.children[1];
+  if (input.type === "password") {
+    input.type = "text";
+    eye.classList.remove("fa-eye-slash");
+    eye.classList.add("fa-eye")
+  } else {
+    input.type = "password";
+    eye.classList.remove("fa-eye");
+    eye.classList.add("fa-eye-slash")
+  }
+};

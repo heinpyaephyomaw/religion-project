@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="assets/vendor/bootstrap4.6/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="assets/css/register.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main class="container-fluid login-background">
+      <div class="row h-100">
+        <div class="container">
+          <div class="row h-100">
+            <div class="col-12">
+              <div class="login-center">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="login-header">Registration your Account</h3>
+                  </div>
+                  <div class="card-body">
+                    <form action="" class="mb-3">
+                        <div class="form-group">
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="Name"
+                              class="form-control form-control-custom"
+                            />
+                          </div>
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Email Address"
+                          class="form-control form-control-custom"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <div style="position: relative;">
+                          <input
+                          type="password"
+                          name="password"
+                          placeholder="Password"
+                          class="form-control form-control-custom password"
+                        />
+                        <i class="fa-solid fa-eye-slash password-toggle" onclick="showPass(this)"></i>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div style="position: relative;">
+                          <input
+                          type="password"
+                          name="password"
+                          placeholder="Confirm Password"
+                          class="form-control form-control-custom password"
+                        />
+                        <i class="fa-solid fa-eye-slash password-toggle" onclick="showPass(this)"></i>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn-submit btn_text_effect">
+                        <span class="button_title">Register</span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap4.6/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
